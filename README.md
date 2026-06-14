@@ -36,7 +36,7 @@ graph TD
     ChatRoute -->|Text Input| NutriNode
 
     %% LangGraph Orchestrator
-    subgraph LangGraph State Machine (WorkflowState)
+    subgraph state_machine ["LangGraph State Machine (WorkflowState)"]
         NutriNode -->|Food Items & Portions| RAGNode[RAG Agent Node]
         RAGNode -->|Query Vector Guidelines| HealthNode[Health Compliance Node]
         HealthNode -->|Enforce Nutrient Caps| HabitNode[Habit Nudge Node]
